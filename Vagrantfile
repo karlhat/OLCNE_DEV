@@ -1,5 +1,5 @@
 # 
-# Description: Creates an Oracle Linux Cloud Native Development VM
+# Description: Creates an Oracle Linux Cloud Native Developer VM
 # 
 # 
 
