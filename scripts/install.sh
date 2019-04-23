@@ -4,10 +4,6 @@
 # Description: Installs a Oracle Linux Cloud Native Developer VM
 # 
 #
-echo 'Installing and configuring Docker Engine'
-
-# install Docker engine
-yum -y install docker-engine
 
 
 echo 'Installing and configuring Gnome'
@@ -24,9 +20,11 @@ yum-config-manager --enable software_collections
 
 yum -y install devtoolset-6.x86_64 rh-eclipse46.x86_64 rh-eclipse46-docker-client  rh-eclipse46-eclipse-cdt-docker rh-eclipse46-eclipse-linuxtools-docker
 
-# Format a second disk as  Btrfs volume
-# Configure Btrfs storage driver for Docker engine
+echo 'Installing Docker'
 
+# install Docker engine      # Format a second disk as  Btrfs volume
+yum clean all                # Configure Btrfs storage driver for Docker engine
+yum -y install docker-engine
 docker-storage-config -s btrfs -d /dev/sdb
 
 # Start and enable Docker engine
@@ -40,8 +38,13 @@ usermod -a -G docker vagrant
 echo 'Installing Kubectl'
 yum install kubectl -y 
 
+
+echo 'Installing Git client'
+yum install git  -y 
+
 #setting password for  Vagrant user
 echo "Welcome1" | passwd --stdin vagrant
+
 #Enable X11 
 
 systemctl set-default graphical.target
@@ -50,4 +53,4 @@ reboot
 
 echo 'OLCNE Developer VM  is ready to use'
 echo 'To get started, on your VirtualBox Manager :'
-echo '  Double click on OLCNE_DEV, then loggin as vagran user password Welcome1'
+echo '  Double click on OLCNE-DEV, then loggin as vagran user password Welcome1'
