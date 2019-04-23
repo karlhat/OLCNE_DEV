@@ -8,6 +8,7 @@
 
 echo 'Installing and configuring Gnome'
 # Install Gnome 
+yum clean all
 yum -y install @gnome-desktop @x11 firefox
 
 
@@ -22,8 +23,9 @@ yum -y install devtoolset-6.x86_64 rh-eclipse46.x86_64 rh-eclipse46-docker-clien
 
 echo 'Installing Docker'
 
-# install Docker engine      # Format a second disk as  Btrfs volume
-yum clean all                # Configure Btrfs storage driver for Docker engine
+# install Docker engine     
+# Format a second disk as  Btrfs volume
+# Configure Btrfs storage driver for Docker engine
 yum -y install docker-engine
 docker-storage-config -s btrfs -d /dev/sdb
 
