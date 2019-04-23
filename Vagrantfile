@@ -10,7 +10,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 # define hostname
-NAME = "OLCNE_DEV"
+NAME = "OLCNE-DEV"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ol7-latest"
