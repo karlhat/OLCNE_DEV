@@ -9,7 +9,7 @@ A Vagrantfile that installs and configures VirtualBox Developer Virtual Machine 
 2. Install [Vagrant](https://vagrantup.com/)
 
 ## Getting started
-1. Clone this repository `https://github.com/karlhat/OLCNE_DEV.git`
+1. Clone this repository `git clone https://github.com/karlhat/OLCNE_DEV.git`
 2. Change into the `OLCNE_DEV` folder
 3. Run `vagrant up; vagrant ssh`
 4. Open the VirtualBox Manager
