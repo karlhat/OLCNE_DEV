@@ -14,7 +14,7 @@ A Vagrantfile that installs and configures VirtualBox Developer Virtual Machine 
 3. Run `vagrant up; vagrant ssh`
 4. Open the VirtualBox Manager
 5. Click on OLCNE-DEV Virtual Machine
-6. Login as vagrant user with password `Welcome1`
+6. Login as `vagrant` user with password `Welcome1`
 7. Lunch Eclipse IDE clicking menu Applications-> Programming -> Red Hat Eclipse-xxxx, xxxx is the Eclipse version
 
 
